@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+
+		<title>Registro de Salida en la Tarjeta de Control Visible</title>
+
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+		<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+
+		<script src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+		<link  href="../../../css/bootstrap.min.css" rel="stylesheet">
+
+		<link  href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css" rel="stylesheet">
+
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<script src="../../../js/datatable.js"></script>
+		<script src="../../../js/datatableDetalle.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+
+			<h1><i class="fa fa-book"></i>  Registro de O/C en Tarjeta de Control Visible</h1>
+			<hr />
+
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#paso1" data-toggle="tab">Paso 1</a>
+				</li>
+				<li class="disabled">
+					<a  href="#paso2" data-toggle="tab">Paso 2</a>
+				</li>
+				
+			</ul>
+
+			<div class="well well-sm">
+
+				<h2 class="panel-title">Listado de Ordenes de compras Aprobadas</h2>
+
+				<div class="panel-body">
+					
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Ordenes de compras</h3>
+						</div>
+						<div class="panel-body">
+
+							<table id="tablaDetalle" class="display"  cellspacing="0" width="100%">
+								<thead>
+									<tr>
+										<th>Requerimientos</th>
+										<th>Fecha Generada</th>
+										<th>Fecha Entrega</th>
+										<th>Solicitante</th>
+										<th>Area Solicitante</th>
+										<th>Viable</th>
+										<th>Ver detalles</th>
+										<th></th>
+									</tr>
+								</thead>
+
+								<tfoot>
+									<tr>
+										<th>Requerimientos</th>
+										<th>Fecha Generada</th>
+										<th>Fecha Entrega</th>
+										<th>Solicitante</th>
+										<th>Area Solicitante</th>
+										<th>Viable</th>
+										<th>Ver detalles</th>
+										<th></th>
+									</tr>
+								</tfoot>
+
+								<tbody>
+									<tr>
+										<td>rxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Ver</a></td>
+										<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">
+												Registrar </label>
+										</div></td>
+									</tr>
+									<tr>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Ver</a></td>
+										<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">
+												Registrar </label>
+										</div></td>
+									</tr>
+									<tr>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Ver</a></td>
+										<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">
+												Registrar </label>
+										</div></td>
+									</tr>
+									<tr>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Ver</a></td>
+										<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">
+												Registrar </label>
+										</div></td>
+									</tr>
+									<tr>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Ver</a></td>
+										<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">
+												Registrar </label>
+										</div></td>
+									</tr>
+									<tr>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Ver</a></td>
+										<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">
+												Registrar </label>
+										</div></td>
+									</tr>
+									<tr>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td>xxxxx</td>
+										<td><a href="#" class="btn btn-link"><i class="fa fa-eye"></i> Ver</a></td>
+										<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">
+												Registrar </label>
+										</div></td>
+									</tr>
+
+								</tbody>
+								
+							</table>
+							<div class="row-fluid" >
+								<a href="paso2.html" class="btn btn-info disabled">Registrar O/C</a>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="well well-sm">
+
+					<h2 class="panel-title"></h2>
+					<div class="panel-body">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h3 class="panel-title">Detalle de Ordenes de Compras</h3>
+							</div>
+							<div class="panel-body">
+
+								<table id="tabla" class="display" cellspacing="0" width="100%">
+									<thead>
+										<tr>
+											<th>N° O/C </th>
+											<th>Descripcion</th>
+											<th>Cantidad</th>
+											<th>Und Medida</th>
+											<th>ACosto Unt</th>
+											<th>Descuento</th>
+											<th>Total</th>
+
+										</tr>
+									</thead>
+
+									<tfoot>
+										<tr>
+											<th>N° O/C </th>
+											<th>Descripcion</th>
+											<th>Cantidad</th>
+											<th>Und Medida</th>
+											<th>ACosto Unt</th>
+											<th>Descuento</th>
+											<th>Total</th>
+
+										</tr>
+									</tfoot>
+
+									<tbody>
+										<tr>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+										</tr>
+										<tr>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+										</tr>
+										<tr>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+										</tr>
+										<tr>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+										</tr>
+										<tr>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+										</tr>
+										<tr>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+										<tr>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+											<td>xxxxx</td>
+										</tr>
+
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+					
+			</div>
+
+		</div>
+		<!-- /container -->
+	</body>
+</html>

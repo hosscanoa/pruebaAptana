@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+
+		<title>Producto</title>
+
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
+
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+		<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+
+		<script src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+		<link  href="../../../css/bootstrap.min.css" rel="stylesheet">
+
+		<link  href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css" rel="stylesheet">
+
+		<link  href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<script src="../../../js/datatable.js"></script>
+		<script src="../../../js/spinner.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+
+			<h1><i class="fa fa-cube"></i> PRODUCTO</h1>
+			<hr />
+
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade active in" id="paso1">
+
+					<div class="well well-sm">
+
+						<h2 class="panel-title">Mantenimiento Producto</h2>
+
+						<div class="panel-body">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									Datos de Producto
+								</div>
+								<div class="panel-body">
+
+									<form class="form-horizontal">
+										<div class="form-group">
+											<label for="descripcion" class="col-lg-2 control-label">Descripción</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="descripcion" placeholder="Email">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="proveedor" class="col-lg-2 control-label">Proveedor</label>
+											<div class="col-lg-10">
+												<select class="form-control" id="proveedor">
+													<option>XXXXX</option>
+													<option>XXXXX</option>
+													<option>XXXXX</option>
+													<option>XXXXX</option>
+													<option>XXXXX</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="unidad" class="col-lg-2 control-label">Unidad de Medida</label>
+											<div class="col-lg-10">
+												<select class="form-control" id="unidad">
+													<option>XXXXX</option>
+													<option>XXXXX</option>
+													<option>XXXXX</option>
+													<option>XXXXX</option>
+													<option>XXXXX</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label">Especificaciones Técnicas</label>
+											<div class="input-group">
+												<span class="input-group-addon">Ubicación file</span>
+												<input type="text" class="form-control">
+												<span class="input-group-btn">
+													<button class="btn btn-default" type="button">
+														Buscar
+													</button> </span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label">Precio</label>
+											<div class="input-group">
+												<span class="input-group-addon">S/.</span>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="spinner" class="col-lg-2 control-label">Stock Mínimo</label>
+											<div class="col-lg-10">
+												<input class="form-control" id="minimo">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="spinner" class="col-lg-2 control-label">Stock Máximo</label>
+											<div class="col-lg-10">
+												<input class="form-control" id="maximo">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="col-lg-10 col-lg-offset-2">
+												<button class="btn btn-default">
+													<i class="fa fa-times"></i> Cancelar
+												</button>
+												<button type="submit" class="btn btn-primary">
+													<i class="fa fa-check"></i> Grabar
+												</button>
+											</div>
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									Productos Registrados
+								</div>
+								<div class="panel-body">
+									<table id="tabla" class="display" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th>Cód.</th>
+												<th>Desc.</th>
+												<th>Proveedor</th>
+												<th>Unid. Med.</th>
+												<th>Espec. Tec.</th>
+												<th>Precio</th>
+												<th>Stock Min.</th>
+												<th>Stock Max.</th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+
+										<tfoot>
+											<tr>
+												<th>Cód.</th>
+												<th>Desc.</th>
+												<th>Proveedor</th>
+												<th>Unid. Med.</th>
+												<th>Espec. Tec.</th>
+												<th>Precio</th>
+												<th>Stock Min.</th>
+												<th>Stock Max.</th>
+												<th></th>
+												<th></th>
+											</tr>
+										</tfoot>
+
+										<tbody>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Ver</a></td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+							<!-- /container -->
+	</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+
+		<title>Producto</title>
+
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
+
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+		<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+
+		<script src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+		<link  href="../../../css/bootstrap.min.css" rel="stylesheet">
+
+		<link  href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css" rel="stylesheet">
+
+		<link  href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<script src="../../../js/datatable.js"></script>
+		<script src="../../../js/spinner.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+
+			<h1><i class="fa fa-child"> </i> PROVEEDOR</h1>
+			<hr />
+
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade active in" id="paso1">
+
+					<div class="well well-sm">
+
+						<h2 class="panel-title">Mantenimiento Proveedor</h2>
+
+						<div class="panel-body">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									Datos de Proveedor
+								</div>
+								<div class="panel-body">
+
+									<form class="form-horizontal">
+										<div class="form-group">
+											<label for="ruc" class="col-lg-2 control-label">RUC</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="ruc" placeholder="Número de RUC">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="razonSocial" class="col-lg-2 control-label">Razon Social</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="razonSocial" placeholder="Razon Social">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="rnp" class="col-lg-2 control-label">Código RNP</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="rnp" placeholder="Código Registro Nacional de Proveedores">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="direccion" class="col-lg-2 control-label">Dirección</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="direccion" placeholder="Dirección">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="telefono" class="col-lg-2 control-label">Teléfono</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="telefono" placeholder="Número de Teléfono">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="email" class="col-lg-2 control-label">E-mail</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="email" placeholder="Dirección de Email">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="url" class="col-lg-2 control-label">Web</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="url" placeholder="Dirección Web">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="col-lg-10 col-lg-offset-2">
+												<button class="btn btn-default">
+													<i class="fa fa-times"></i> Cancelar
+												</button>
+												<button type="submit" class="btn btn-primary">
+													<i class="fa fa-check"></i> Grabar
+												</button>
+											</div>
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									Proveedores Registrados
+								</div>
+								<div class="panel-body">
+									<table id="tabla" class="display" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th>RUC</th>
+												<th>Razón Soc.</th>
+												<th>RNP</th>
+												<th>Dirección</th>
+												<th>Teléfono</th>
+												<th>E-mail</th>
+												<th>Web</th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+
+										<tfoot>
+											<tr>
+												<th>RUC</th>
+												<th>Razón Soc.</th>
+												<th>RNP</th>
+												<th>Dirección</th>
+												<th>Teléfono</th>
+												<th>E-mail</th>
+												<th>Web</th>
+												<th></th>
+												<th></th>
+											</tr>
+										</tfoot>
+
+										<tbody>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											<tr>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td>xxxxx</td>
+												<td><a href="#" class="btn btn-warning btn-xs"><i class="fa fa-retweet"></i> Actualizar</a></td>
+												<td><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Eliminar</a></td>
+											</tr>
+											
+
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+							<!-- /container -->
+	</body>
+</html>
